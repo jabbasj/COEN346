@@ -1,0 +1,48 @@
+
+Time: 1.000000 - Usr: A - Prcs: 1 - Start - Qntm: 4.000000 - Left: 5.000000
+
+
+
+Time: 5.120000 - Usr: A - Prcs: 1 - Pause - Qntm: 4.000000 - Left: 1.000000
+
+
+
+Time: 5.120000 - Usr: A - Prcs: 0 - Start - Qntm: 1.000000 - Left: 3.000000
+
+
+
+Time: 6.150000 - Usr: A - Prcs: 0 - Pause - Qntm: 1.000000 - Left: 2.000000
+
+
+
+Time: 6.150000 - Usr: B - Prcs: 0 - Start - Qntm: 2.000000 - Left: 6.000000
+
+
+
+Time: 8.209999 - Usr: B - Prcs: 0 - Pause - Qntm: 2.000000 - Left: 4.000000
+
+
+
+Time: 8.209999 - Usr: A - Prcs: 1 - Start - Qntm: 1.000000 - Left: 1.000000
+
+
+
+Time: 9.249999 - Usr: A - Prcs: 1 - Finish - Qntm: 1.000000 - Left: 0.000000
+
+
+
+Time: 9.249999 - Usr: A - Prcs: 0 - Start - Qntm: 2.000000 - Left: 2.000000
+
+
+
+Time: 11.319999 - Usr: A - Prcs: 0 - Finish - Qntm: 2.000000 - Left: 0.000000
+
+
+
+Time: 11.319999 - Usr: B - Prcs: 0 - Start - Qntm: 4.000000 - Left: 4.000000
+
+
+
+Time: 15.439999 - Usr: B - Prcs: 0 - Finish - Qntm: 4.000000 - Left: 0.000000
+
+
