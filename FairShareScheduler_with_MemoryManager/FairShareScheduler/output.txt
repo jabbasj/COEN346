@@ -1,0 +1,236 @@
+
+Time: 1.000000 - Process: 2 - Start
+
+
+	Lookup:  Variable: 3 Value: -1
+
+	Lookup:  Variable: 3 Value: -1
+
+
+Time: 1.335000 - Process: 2 - Pause
+
+
+
+Time: 1.335000 - Process: 2 - Start
+
+
+	Lookup:  Variable: 3 Value: -1
+
+	Lookup:  Variable: 3 Value: -1
+
+
+Time: 1.670000 - Process: 2 - Pause
+
+
+
+Time: 1.670000 - Process: 2 - Start
+
+
+	Lookup:  Variable: 3 Value: -1
+
+	Lookup:  Variable: 1 Value: -1
+
+
+Time: 2.754000 - Process: 2 - Pause
+
+
+
+Time: 2.754000 - Process: 1 - Start
+
+
+	Lookup:  Variable: 1 Value: -1
+
+
+Time: 3.670000 - Process: 1 - Pause
+
+
+
+Time: 3.670000 - Process: 2 - Start
+
+
+	Store:  Variable: 3 Value: 7
+
+
+Time: 4.571000 - Process: 2 - Finish
+
+
+
+Time: 4.571000 - Process: 1 - Start
+
+
+	Release:  Variable: 1
+
+
+Time: 5.215000 - Process: 1 - Pause
+
+
+
+Time: 5.215000 - Process: 3 - Start
+
+
+	Store:  Variable: 1 Value: 5
+
+
+Time: 5.608000 - Process: 3 - Pause
+
+
+
+Time: 5.608000 - Process: 1 - Start
+
+
+	Store:  Variable: 1 Value: 5
+
+
+Time: 5.999000 - Process: 1 - Pause
+
+
+
+Time: 5.999000 - Process: 3 - Start
+
+
+
+
+Memory Manager, SWAP - Variable: 3  with:  2
+
+
+	Lookup:  Variable: 2 Value: 0
+
+
+Time: 6.381000 - Process: 3 - Pause
+
+
+
+Time: 6.381000 - Process: 1 - Start
+
+
+	Lookup:  Variable: 2 Value: 31
+
+
+Time: 6.757000 - Process: 1 - Pause
+
+
+
+Time: 6.757000 - Process: 3 - Start
+
+
+	Lookup:  Variable: 1 Value: 5
+
+
+Time: 6.878000 - Process: 3 - Pause
+
+
+
+Time: 6.878000 - Process: 1 - Start
+
+
+	Lookup:  Variable: 1 Value: 5
+
+
+Time: 7.004000 - Process: 1 - Pause
+
+
+
+Time: 7.004000 - Process: 3 - Start
+
+
+	Lookup:  Variable: 1 Value: 5
+
+
+Time: 7.124000 - Process: 3 - Pause
+
+
+
+Time: 7.124000 - Process: 1 - Start
+
+
+	Lookup:  Variable: 1 Value: 5
+
+
+Time: 7.250000 - Process: 1 - Pause
+
+
+
+Time: 7.250000 - Process: 3 - Start
+
+
+	Lookup:  Variable: 1 Value: 5
+
+
+Time: 7.369999 - Process: 3 - Pause
+
+
+
+Time: 7.369999 - Process: 1 - Start
+
+
+	Lookup:  Variable: 1 Value: 5
+
+
+Time: 7.493999 - Process: 1 - Pause
+
+
+
+Time: 7.493999 - Process: 3 - Start
+
+
+	Lookup:  Variable: 1 Value: 5
+
+
+Time: 7.614999 - Process: 3 - Pause
+
+
+
+Time: 7.614999 - Process: 1 - Start
+
+
+	Store:  Variable: 3 Value: 7
+
+
+
+Memory Manager, SWAP - Variable: 1  with:  3
+
+
+
+Time: 8.493999 - Process: 1 - Finish
+
+
+
+Time: 8.493999 - Process: 3 - Start
+
+
+	Store:  Variable: 3 Value: 7
+
+
+Time: 9.367999 - Process: 3 - Pause
+
+
+
+Time: 9.367999 - Process: 3 - Start
+
+
+	Store:  Variable: 1 Value: 8
+
+
+
+Memory Manager, SWAP - Variable: 2  with:  1
+
+
+
+Time: 9.993999 - Process: 3 - Pause
+
+
+
+Time: 9.993999 - Process: 3 - Start
+
+
+	Store:  Variable: 2 Value: 3
+
+
+
+Memory Manager, SWAP - Variable: 3  with:  2
+
+
+
+Time: 10.603999 - Process: 3 - Finish
+
+
