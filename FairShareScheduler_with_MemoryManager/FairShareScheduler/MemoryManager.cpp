@@ -104,6 +104,7 @@ int MemoryManager::fetch_page_from_memory(int val_id) {
 		if (mMainMemory[i].val_id == val_id) {
 			result = mMainMemory[i].val_value;
 			found_in_main_memory = true;
+			mMainMemory[i] = Page(val_id, result);
 			break;
 		}
 	}
@@ -111,10 +112,6 @@ int MemoryManager::fetch_page_from_memory(int val_id) {
 
 	if (!found_in_main_memory) {
 		result = fetch_page_from_virtual_memory(val_id);
-
-		if (result != -1) {
-			result = load_into_main_memory(val_id, result);
-		}
 	}
 
 	return result;
@@ -134,7 +131,7 @@ int MemoryManager::fetch_page_from_virtual_memory(int val_id) {
 		while (getline(input_file, line) && !found) {
 			int pos = line.find(' ');
 			string value_id_line = line.substr(0, pos);
-			int saved_val_id = stoi(line);
+			int saved_val_id = stoi(value_id_line);
 
 			if (saved_val_id == val_id) {
 				found = true;
@@ -142,7 +139,7 @@ int MemoryManager::fetch_page_from_virtual_memory(int val_id) {
 				result = stoi(line);
 			}
 			else {
-				output_file << line;
+				output_file << line + "\n";
 			}
 		}
 
@@ -152,13 +149,21 @@ int MemoryManager::fetch_page_from_virtual_memory(int val_id) {
 		remove("virtualmemory.txt");
 		// rename old to new
 		rename("temp.txt", "virtualmemory.txt");
+
+		if (result != -1) {
+			load_into_main_memory(val_id, result);
+		}
 	}
+
 
 	return result;
 }
 
 //erases page from main memory
 void MemoryManager::write_to_virtual_memory(int val_id, int val_value) {
+
+	//get from virtual memory if it exists (to avoid duplicates)
+	fetch_page_from_virtual_memory(val_id);
 
 	// remove from main memory
 	for (int i = 0; i < SIZE_OF_MAIN_MEMORY && i < mMainMemory.size(); i++) {
@@ -174,10 +179,10 @@ void MemoryManager::write_to_virtual_memory(int val_id, int val_value) {
 	string line;
 	if (input_file.is_open()) {
 		while (getline(input_file, line)) {			
-			output_file << line;
+			output_file << line + "\n";
 		}
 
-		output_file << to_string(val_id) + " " + to_string(val_value);
+		output_file << to_string(val_id) + " " + to_string(val_value) + "\n";
 
 		input_file.close();
 		output_file.close();
@@ -196,7 +201,12 @@ int MemoryManager::load_into_main_memory(int val_id, int val_value) {
 
 	//see if it's in main memory, just update it
 	if (fetch_page_from_memory(val_id) != -1) {
-
+		for (int i = 0; i < mMainMemory.size() && i < SIZE_OF_MAIN_MEMORY; i++) {
+			if (mMainMemory[i].val_id == val_id) {
+				mMainMemory[i] = Page(val_id, val_value);
+				break;
+			}
+		}
 	} 
 	else if (mMainMemory.size() < SIZE_OF_MAIN_MEMORY) {
 		mMainMemory.push_back(*(new Page(val_id, val_value)));

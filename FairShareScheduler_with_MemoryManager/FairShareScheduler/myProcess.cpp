@@ -65,6 +65,8 @@ void process::read_instructions() {
 
 //method that runs on each process thread
 void process::run_process() {
+	
+	srand(time(NULL));
 
 	while (!finished && ready) {
 		//set resumed trap
@@ -73,8 +75,10 @@ void process::run_process() {
 
 #ifdef REAL_SCENARIO
 				//For real scenario
+					
 					auto start = std::chrono::system_clock::now();
 					execute_next_instruction();
+
 					int rand_sleep_time = rand() % 1000;
 					this_thread::sleep_for(chrono::milliseconds(rand_sleep_time));
 
@@ -107,7 +111,7 @@ void process::run_process() {
 //fake instruction handler (could add: attach to my CLI)
 void process::execute_next_instruction() {
 
-	srand(time(NULL));
+	//srand(time(NULL));
 
 	int rand_index = rand() % instructions.size();
 	string command = instructions[rand_index];

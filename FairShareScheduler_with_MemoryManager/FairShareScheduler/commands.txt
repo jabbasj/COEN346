@@ -6,3 +6,6 @@ Lookup 2
 Release 1
 Store 1 8
 Lookup 1
+Store 4 10
+Store 7 9
+Store 5 5
